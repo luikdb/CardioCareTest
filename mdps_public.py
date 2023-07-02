@@ -16,13 +16,14 @@ if "visibility" not in st.session_state:
 
 
 with col1:
-    age = st.slider('Age:', 1,110,18)
+    st.markdown("**Age**")
+    age = st.slider('', 1,110,18)
 
 
 with col2:
 
-
-    sex = st.slider('Sex: 0-Female, 1=Male', 0, 1, 1)
+    st.markdown("**Sex**")
+    sex = st.slider('0-Female, 1=Male', 0, 1, 1)
 
 
 
