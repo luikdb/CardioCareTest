@@ -27,7 +27,7 @@ with col2:
 
 
 with col3:
-    cp = st.radio("Chest Pain type:",('0: typical angina', '1: atypical angina', '2:non-anginal', '3:asymptomatic'))
+    cp = st.slider("Chest Pain type: 0: Typical angina, 1: Atypical angina, 2:Non-anginal ",(0,2,1))
 
 with col1:
     trestbps = st.text_input('Resting Blood Pressure')
@@ -40,7 +40,7 @@ with col3:
    
 
 with col1:
-    restecg = st.slider('Resting Electrocardiographic Results: 0 = normal, 1 = having ST-T wave abnormality, 2 = Left Ventricle Hypertrophy', 0,1,1)
+    restecg = st.slider('Resting Electrocardiographic Results: 0 = normal, 1 = having ST-T wave abnormality, 2 = Left Ventricle Hypertrophy', 0,2,1)
 
 
 with col2:
