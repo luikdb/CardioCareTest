@@ -31,7 +31,7 @@ with col2:
 
 with col3:
     st.markdown("**Chest Pain type- **")
-    cp = st.slider('0: Typical angina, 1: Atypical angina, 2:Non-anginal',0,2,1)
+    cp = st.selectbox('0: Typical angina, 1: Atypical angina, 2:Non-anginal',('0', '1','2'))
 
 with col1:
     st.markdown("**Resting Blood Pressure**")
@@ -43,12 +43,12 @@ with col2:
 
 with col3:
     st.markdown("**Fasting Blood Sugar > 120 mg/dl:**")
-    fbs = st.slider('0-False, 1=True', 0, 1, 1)
+    fbs = st.selectbox('0-False, 1=True', ('0', '1'))
    
 
 with col1:
     st.markdown("**Resting Electrocardiographic Results:**")
-    restecg = st.slider('0 = normal, 1 = having ST-T wave abnormality, 2 = Left Ventricle Hypertrophy', 0,2,1)
+    restecg = st.selectbox('0 = normal, 1 = having ST-T wave abnormality, 2 = Left Ventricle Hypertrophy',('0', '1','2'))
 
 
 with col2:
@@ -57,7 +57,7 @@ with col2:
 
 with col3:
     st.markdown("**Exercise Induced Angina: **")
-    exang = st.slider('1 = True, 0 = False', 0,1,1)
+    exang = st.selectbox('1 = True, 0 = False',('0', '1'))
 
 with col1:
     st.markdown("**Exercise Induced Angina: **")
@@ -65,11 +65,11 @@ with col1:
 
 with col2:
     st.markdown("**Slope of the peak exercise ST segment:**")
-    slope = st.slider(' 0 = upsloping: better heart rate with excercise (uncommon), 1 = flat: minimal change (typical healthy heart), 2 = downsloping: signs of unhealthy heart', 0,2,1)
+    slope = st.selectbox(' 0 = upsloping: better heart rate with excercise (uncommon), 1 = flat: minimal change (typical healthy heart), 2 = downsloping: signs of unhealthy heart',('0', '1','2'))
 
 with col3:
     st.markdown("**Major vessels colored by flourosopy**")
-    ca = st.slider('', 0,3,1)
+    ca = st.selectbox('',('0', '1','2'))
 
 with col1:
     st.markdown("**Thalassemia:**")
