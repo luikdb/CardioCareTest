@@ -10,6 +10,11 @@ st.title('Heart Disease Prediction using ML')
 # getting the input data from the user
 col1, col2, col3 = st.columns(3)
 
+if "visibility" not in st.session_state:
+    st.session_state.visibility = "visible"
+    st.session_state.disabled = False
+
+
 with col1:
     age = st.text_input('Age')
 
@@ -17,7 +22,9 @@ with col2:
     sex = st.text_input('Sex')
 
 with col3:
-    cp = st.text_input('Chest Pain types', '0-3')
+    cp = st.text_input('Chest Pain types', '0-3', label_visibility=st.session_state.visibility,
+        disabled=st.session_state.disabled,
+        placeholder=st.session_state.placeholder,)
 
 with col1:
     trestbps = st.text_input('Resting Blood Pressure')
@@ -57,8 +64,8 @@ if st.button('Heart Disease Test Result'):
     heart_prediction = heart_disease_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])
 
     if heart_prediction[0] == 1:
-        heart_diagnosis = 'The person is having heart disease.'
+        heart_diagnosis = '⚠️The person is having heart disease.'
     else:
-        heart_diagnosis = 'The person does not have any heart disease.'
+        heart_diagnosis = '🎉The person does not have any heart disease.'
 
 st.success(heart_diagnosis)
