@@ -40,7 +40,8 @@ with col3:
    
 
 with col1:
-    restecg = st.slider('Resting Electrocardiographic Results: 0 = normal, 1 = having ST-T wave abnormality, 2 = Left Ventricle Hypertrophy', 0,2,1)
+    st.markdown("**Resting Electrocardiographic Results:**")
+    restecg = st.slider('0 = normal, 1 = having ST-T wave abnormality, 2 = Left Ventricle Hypertrophy', 0,2,1)
 
 
 with col2:
