@@ -44,7 +44,7 @@ with col1:
 
 
 with col2:
-    thalach = st.slider(st.subheader('Maximum Heart Rate achieved'), 30, 250, 130)
+    thalach = st.slider(st.markdown("**Maximum Heart Rate achieved**"), 30, 250, 130)
 
 with col3:
     exang = st.slider('Exercise Induced Angina: 1 = True, 0 = False', 0,1,1)
