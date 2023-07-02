@@ -25,8 +25,8 @@ with col1:
 with col2:
 
     st.markdown("**Sex**")
-    sex = st.slider('0-Female, 1=Male', 0, 1, 1)
-
+    sex = st.selectbox('Sex', ('0-Female, 1=Male'))
+    
 
 
 with col3:
