@@ -36,7 +36,8 @@ with col2:
     chol = st.slider('Serum Cholesterol in mg/dl', 10,500,120)
 
 with col3:
-    fbs = st.slider('Fasting Blood Sugar > 120 mg/dl: 0-False, 1=True', 0, 1, 1)
+    st.markdown("**Fasting Blood Sugar > 120 mg/dl:**")
+    fbs = st.slider('0-False, 1=True', 0, 1, 1)
    
 
 with col1:
@@ -49,10 +50,12 @@ with col2:
     thalach = st.slider('', 30, 250, 130)
 
 with col3:
-    exang = st.slider('Exercise Induced Angina: 1 = True, 0 = False', 0,1,1)
+    st.markdown("**Exercise Induced Angina: **")
+    exang = st.slider('1 = True, 0 = False', 0,1,1)
 
 with col1:
-    oldpeak = st.text_input('ST depression induced by exercise(in decimals)')
+    st.markdown("**ST depression induced by exercise(in decimals)**")
+    oldpeak = st.text_input('')
 
 with col2:
     slope = st.slider('Slope of the peak exercise ST segment: 0 = upsloping: better heart rate with excercise (uncommon), 1 = flat: minimal change (typical healthy heart), 2 = downsloping: signs of unhealthy heart', 0,2,1)
