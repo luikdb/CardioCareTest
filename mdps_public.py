@@ -16,7 +16,8 @@ if "visibility" not in st.session_state:
 
 
 with col1:
-    age = st.text_input('Age')
+    age = st.slider('Age:', 1,110,18)
+
 
 with col2:
 
@@ -35,10 +36,12 @@ with col2:
     chol = st.text_input('Serum Cholesterol in mg/dl')
 
 with col3:
-    fbs = st.text_input('Fasting Blood Sugar > 120 mg/dl')
+    fbs = st.slider('Fasting Blood Sugar > 120 mg/dl: 0-False, 1=True', 0, 1, 1)
+   
 
 with col1:
-    restecg = st.text_input('Resting Electrocardiographic results', '0-2')
+    restecg = st.slider('Resting Electrocardiographic Results:', 0,1,1)
+
 
 with col2:
     thalach = st.text_input('Maximum Heart Rate achieved')
