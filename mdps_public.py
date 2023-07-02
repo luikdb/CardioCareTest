@@ -5,7 +5,8 @@ import streamlit as st
 heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 
 # page title
-st.title('Heart Disease Prediction using ML')
+st.title('CardioCare')
+st.header('Heart Disease Prediction using ML')
 
 # getting the input data from the user
 col1, col2, col3 = st.columns(3)
