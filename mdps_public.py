@@ -59,7 +59,7 @@ with col3:
     ca = st.slider('Major vessels colored by flourosopy', 0,3,1)
 
 with col1:
-    thal = st.slider('Thalassemia: 1,3 = normal, 6 = fixed defect, 7 = reversible defect: no proper blood movement when excercising', 1,7)
+    thal = st.slider('Thalassemia: \n1,3 = normal, 6 = fixed defect, 7 = reversible defect: no proper blood movement when excercising', 1,7)
 
 # code for prediction
 heart_diagnosis = ''
