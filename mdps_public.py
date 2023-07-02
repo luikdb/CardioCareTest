@@ -22,7 +22,8 @@ with col2:
     sex = st.text_input('Sex')
 
 with col3:
-    cp = st.text_input('Chest Pain types', '0-3')
+    cp = st.slider('Chest Pain type', 0, 3, 1)
+    
 
 with col1:
     trestbps = st.text_input('Resting Blood Pressure')
