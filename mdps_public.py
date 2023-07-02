@@ -25,7 +25,7 @@ with col1:
 with col2:
 
     st.markdown("**Sex**")
-    sex = st.selectbox('0-Female, 1-Male', ('0 for Female', '1 for Male'))
+    sex = st.selectbox('0-Female, 1-Male', ('0', '1'))
     
 
 
