@@ -27,13 +27,16 @@ with col2:
 
 
 with col3:
-    cp = st.slider('Chest Pain type- 0: Typical angina, 1: Atypical angina, 2:Non-anginal',0,2,1)
+    st.markdown("**Chest Pain type- **")
+    cp = st.slider('0: Typical angina, 1: Atypical angina, 2:Non-anginal',0,2,1)
 
 with col1:
-    trestbps = st.slider('Resting Blood Pressure', 30, 250, 120)
+    st.markdown("**Resting Blood Pressure**")
+    trestbps = st.slider('', 30, 250, 120)
 
 with col2:
-    chol = st.slider('Serum Cholesterol in mg/dl', 10,500,120)
+    st.markdown("**Serum Cholesterol in mg/dl**")
+    chol = st.slider('', 10,500,120)
 
 with col3:
     st.markdown("**Fasting Blood Sugar > 120 mg/dl:**")
@@ -58,13 +61,16 @@ with col1:
     oldpeak = st.text_input('')
 
 with col2:
-    slope = st.slider('Slope of the peak exercise ST segment: 0 = upsloping: better heart rate with excercise (uncommon), 1 = flat: minimal change (typical healthy heart), 2 = downsloping: signs of unhealthy heart', 0,2,1)
+    st.markdown("**Slope of the peak exercise ST segment:**")
+    slope = st.slider(' 0 = upsloping: better heart rate with excercise (uncommon), 1 = flat: minimal change (typical healthy heart), 2 = downsloping: signs of unhealthy heart', 0,2,1)
 
 with col3:
-    ca = st.slider('Major vessels colored by flourosopy', 0,3,1)
+    st.markdown("**Major vessels colored by flourosopy**")
+    ca = st.slider('', 0,3,1)
 
 with col1:
-    thal = st.slider('Thalassemia: \n1,3 = normal, 6 = fixed defect, 7 = reversible defect: no proper blood movement when excercising', 1,7)
+    st.markdown("**Thalassemia:**")
+    thal = st.slider('1,3 = normal, 6 = fixed defect, 7 = reversible defect: no proper blood movement when excercising', 1,7,2)
 
 # code for prediction
 heart_diagnosis = ''
