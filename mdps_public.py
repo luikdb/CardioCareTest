@@ -27,7 +27,7 @@ with col2:
 
 
 with col3:
-    cp = st.slider("Chest Pain type: 0: Typical angina, 1: Atypical angina, 2:Non-anginal ",(0,2,1))
+    cp = st.slider('Chest Pain type- 0: Typical angina, 1: Atypical angina, 2:Non-anginal',0,2,1)
 
 with col1:
     trestbps = st.text_input('Resting Blood Pressure')
