@@ -19,7 +19,11 @@ with col1:
     age = st.text_input('Age')
 
 with col2:
-    sex = st.text_input('Sex')
+
+
+    sex = st.slider('Sex: 0-Female, 1=Male', 0, 1, 1)
+
+
 
 with col3:
     cp = st.radio("Chest Pain type:",('0: typical angina', '1: atypical angina', '2:non-anginal', '3:asymptomatic'))
