@@ -88,3 +88,51 @@ if st.button('Heart Disease Test Result'):
         heart_diagnosis = '🎉The person does not have any heart disease.'
 
 st.success(heart_diagnosis)
+import streamlit as st
+import streamlit_webrtc as webrtc
+from streamlit_webrtc import VideoTransformerBase, VideoFrame
+
+# Custom video transformer class to capture screenshot
+class ScreenshotTransformer(VideoTransformerBase):
+    def __init__(self):
+        self.screenshot = None
+
+    def transform(self, frame: VideoFrame) -> VideoFrame:
+        # Capture the first frame as a screenshot
+        if self.screenshot is None:
+            self.screenshot = frame.to_image()
+            st.stop()
+
+        return frame
+
+# Main application code
+def main():
+    # Set up Streamlit
+    st.title("Webpage Screenshot Downloader")
+
+    # Initialize the video transformer
+    transformer = ScreenshotTransformer()
+
+    # Configure the video capture
+    webrtc_ctx = webrtc.Streamer(
+        video_transformer_factory=transformer,
+        desired_playing_width=640,
+        key="screenshot"
+    )
+
+    # Display the video capture
+    webrtc_ctx.video_transformer = transformer
+    webrtc_ctx.update()
+    video_frame = webrtc_ctx.video_frame
+
+    # Display the captured screenshot
+    if video_frame is not None:
+        st.image(video_frame.to_image(), use_column_width=True)
+
+        # Create a download button for the image
+        download_button_str = f"Download Screenshot"
+        download_as = "screenshot.png"
+        st.download_button(download_button_str, video_frame.to_image().save, args=(download_as,))
+
+if __name__ == "__main__":
+    main()
