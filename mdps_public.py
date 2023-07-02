@@ -22,9 +22,7 @@ with col2:
     sex = st.text_input('Sex')
 
 with col3:
-    cp = st.text_input('Chest Pain types', '0-3', label_visibility=st.session_state.visibility,
-        disabled=st.session_state.disabled,
-        placeholder=st.session_state.placeholder,)
+    cp = st.text_input('Chest Pain types', '0-3' )
 
 with col1:
     trestbps = st.text_input('Resting Blood Pressure')
