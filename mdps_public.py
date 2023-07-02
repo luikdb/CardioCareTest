@@ -30,10 +30,10 @@ with col3:
     cp = st.slider('Chest Pain type- 0: Typical angina, 1: Atypical angina, 2:Non-anginal',0,2,1)
 
 with col1:
-    trestbps = st.text_input('Resting Blood Pressure')
+    trestbps = st.slider('Resting Blood Pressure', 30, 250, 120)
 
 with col2:
-    chol = st.text_input('Serum Cholesterol in mg/dl')
+    chol = st.slider('Serum Cholesterol in mg/dl', 10,500,120)
 
 with col3:
     fbs = st.slider('Fasting Blood Sugar > 120 mg/dl: 0-False, 1=True', 0, 1, 1)
@@ -44,13 +44,13 @@ with col1:
 
 
 with col2:
-    thalach = st.text_input('Maximum Heart Rate achieved')
+    thalach = st.slider('Maximum Heart Rate achieved', 30, 250, 130)
 
 with col3:
     exang = st.slider('Exercise Induced Angina: 1 = True, 0 = False', 0,1,1)
 
 with col1:
-    oldpeak = st.text_input('ST depression induced by exercise')
+    oldpeak = st.text_input('ST depression induced by exercise(in decimals)')
 
 with col2:
     slope = st.slider('Slope of the peak exercise ST segment: 0 = upsloping: better heart rate with excercise (uncommon), 1 = flat: minimal change (typical healthy heart), 2 = downsloping: signs of unhealthy heart', 0,2,1)
