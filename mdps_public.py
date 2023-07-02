@@ -54,7 +54,7 @@ with col3:
     exang = st.slider('1 = True, 0 = False', 0,1,1)
 
 with col1:
-    st.markdown("**ST depression induced by exercise(in decimals)**")
+    st.markdown("**Exercise Induced Angina: **")
     oldpeak = st.text_input('')
 
 with col2:
