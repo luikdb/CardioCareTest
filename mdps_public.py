@@ -6,7 +6,6 @@ heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 
 # page title
 st.title('CardioCare')
-st.header(':red[Cardio]:white[Care]')
 st.header('Heart Disease Prediction using ML')
 
 
