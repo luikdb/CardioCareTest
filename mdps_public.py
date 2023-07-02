@@ -47,19 +47,19 @@ with col2:
     thalach = st.text_input('Maximum Heart Rate achieved')
 
 with col3:
-    exang = st.text_input('Exercise Induced Angina')
+    exang = st.slider('Exercise Induced Angina: 1 = True, 0 = False', 0,1,1)
 
 with col1:
     oldpeak = st.text_input('ST depression induced by exercise')
 
 with col2:
-    slope = st.text_input('Slope of the peak exercise ST segment')
+    slope = st.slider('Slope of the peak exercise ST segment: 0 = upsloping: better heart rate with excercise (uncommon), 1 = flat: minimal change (typical healthy heart), 2 = downsloping: signs of unhealthy heart', 0,2,1)
 
 with col3:
-    ca = st.text_input('Major vessels colored by flourosopy', '0-3')
+    ca = st.slider('Major vessels colored by flourosopy', 0,3,1)
 
 with col1:
-    thal = st.text_input('thal', '0 = normal; 1 = fixed defect; 2 = reversable defect')
+    thal = st.slider('Thalassemia', '1,3 = normal, 6 = fixed defect, 7 = reversible defect: no proper blood movement when excercising', 1,7)
 
 # code for prediction
 heart_diagnosis = ''
