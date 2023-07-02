@@ -22,8 +22,7 @@ with col2:
     sex = st.text_input('Sex')
 
 with col3:
-    cp = st.slider('Chest Pain type', 0, 3, 1)
-    
+    cp = st.radio("Chest Pain type:",('0', '1', '2'))
 
 with col1:
     trestbps = st.text_input('Resting Blood Pressure')
