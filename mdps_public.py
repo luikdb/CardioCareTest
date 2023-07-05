@@ -39,7 +39,7 @@ with col1:
 
 with col2:
     st.markdown("**Serum Cholesterol in mg/dl**")
-    chol = st.slider('', 10,500,120)
+    chol = st.slider('', 10,450,120)
 
 with col3:
     st.markdown("**Fasting Blood Sugar > 120 mg/dl:**")
